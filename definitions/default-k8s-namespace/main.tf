@@ -1,6 +1,6 @@
 resource "kubernetes_namespace" "ns" {
   metadata {
-    generate_name = "ns"
+    generate_name = "ns-"
   }
 }
 
