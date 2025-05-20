@@ -1,5 +1,11 @@
+resource "kubernetes_namespace" "ns" {
+  metadata {
+    generate_name = "ns"
+  }
+}
+
 output "name" {
-  value = "default"
+  value = kubernetes_namespace.ns.metadata[0].name
 }
 
 terraform {
